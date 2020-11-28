@@ -1,0 +1,22 @@
+{
+    "name": "smartclass/schoost",
+    "type": "library",
+    "description": "Schoost, school operating system",
+    "keywords": ["school", "school management", "sis"],
+    "homepage": "https://www.schoost.com",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Simsek Mert",
+            "email": "simsek97@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },    
+    "autoload": {
+        "psr-4" : {
+            "Schoost\\" : "src/"
+        }
+    }
+}

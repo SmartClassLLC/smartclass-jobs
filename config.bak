@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = https://kevinozcann:Slv687..Sl!!@github.com/SmartClassLLC/smartclass-jobs.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+	name = Kevin Ozcan
+	email = kevinozcann@gmail.com

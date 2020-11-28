@@ -1,0 +1,34 @@
+{
+    "name": "aktive_merchant/aktive_merchant",
+    "description": "Aktive-Merchant provides a common interface to process payments using multiple gateways.",
+    "keywords": ["payments", "creditcard", "merchant", "gateway", "stripe", "authorize-net", "paypal", "datacash", "bridgepay", "cardstream", "centinel", "eway", "exact", "fatzebra", "hsbc", "mercury", "modirum", "moneris", "pin", "psigate", "realex", "worldpay"],
+    "homepage": "https://github.com/akDeveloper/Aktive-Merchant",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Kollaros",
+            "email": "andreas.kollaros@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*",
+        "ext-simplexml": "*",
+        "symfony/event-dispatcher": "~2.3,<3.0"
+    },
+     "require-dev": {
+        "phpunit/phpunit": "4.8.*",
+        "doctrine/instantiator": "~1.0.5"
+    },
+     "config": {
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {"AktiveMerchant": "lib/"}
+    },
+    "autoload-dev": {
+        "psr-0": {"AktiveMerchant": "tests/"}
+    }
+}
