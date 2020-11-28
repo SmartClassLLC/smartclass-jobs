@@ -14,14 +14,19 @@ require_once "vendor/autoload.php";
 error_reporting(1);
 ini_set('display_errors', '1');
 
-$dbhost = getenv('DB_HOST');
-$dbport = getenv('DB_PORT');
-$dbuname = getenv('DB_UNAME');
-$dbpass = getenv('DB_PASS');
-$dbnamePrefix = getenv('DBNAME_PREFIX');
-$dbname = $dbnamePrefix."_main";
-$localization = getenv('LOCALIZATION');
-$smartclassUrl = getenv('SMARTCLASS_URL');
+if (file_exists($_SERVER["DOCUMENT_ROOT"] . "/config/config.php")) {
+    require_once $_SERVER["DOCUMENT_ROOT"] . "/config/config.php";
+    $dbport = '3306';
+} else {
+    $dbhost = getenv('DB_HOST');
+    $dbport = getenv('DB_PORT');
+    $dbuname = getenv('DB_UNAME');
+    $dbpass = getenv('DB_PASS');
+    $dbnamePrefix = getenv('DBNAME_PREFIX');
+    $dbname = $dbnamePrefix . "_main";
+    $localization = getenv('LOCALIZATION');
+    $smartclassUrl = getenv('SMARTCLASS_URL');
+}
 
 //MySQL database connection classes
 require_once "class/MySQL/MysqliDb.php";
